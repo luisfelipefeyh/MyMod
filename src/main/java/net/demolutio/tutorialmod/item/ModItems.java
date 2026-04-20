@@ -1,6 +1,6 @@
-package net.demolutio.mymod.item;
+package net.demolutio.tutorialmod.item;
 
-import net.demolutio.mymod.MyMod;
+import net.demolutio.tutorialmod.TutorialMod;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, MyMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register("alexandrite",
             () -> new Item(new Item.Properties()));
