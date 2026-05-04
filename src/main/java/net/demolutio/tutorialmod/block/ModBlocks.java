@@ -1,6 +1,7 @@
 package net.demolutio.tutorialmod.block;
 
 import net.demolutio.tutorialmod.TutorialMod;
+import net.demolutio.tutorialmod.block.custom.AlexandriteLampBlock;
 import net.demolutio.tutorialmod.block.custom.MagicBlock;
 import net.demolutio.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -95,6 +96,11 @@ public class ModBlocks {
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .noOcclusion(), BlockSetType.IRON));
+
+    public static final RegistryObject<Block> ALEXANDRITE_LAMP = registerBlock("alexandrite_lamp",
+            () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of()
+                    .strength(3f)
+                    .lightLevel(state -> state.getValue(AlexandriteLampBlock.CLICKED) ? 15 : 0)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
